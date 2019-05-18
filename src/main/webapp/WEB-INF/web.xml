@@ -12,4 +12,13 @@
         <servlet-name>Myservlet</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+    <filter>
+        <filter-name>MyFilter</filter-name>
+        <filter-class>com.infopulse.filter.ParamFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>MyFilter</filter-name>
+<!--        <servlet-name>Myservlet</servlet-name>-->   <!-- на сервлет -->
+        <url-pattern>/hello</url-pattern>  <!-- на запрос -->
+    </filter-mapping>
 </web-app>
